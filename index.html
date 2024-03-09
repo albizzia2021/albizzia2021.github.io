@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上市物企数据信息网 - 首页</title>
+
+    
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <link rel="stylesheet" href="static/css/line-awesome.css">
+    <link rel="stylesheet" href="static/css/line-awesome-font-awesome.css">
+    <link rel="stylesheet" href="static/css/lightbox.css">
+    <link rel="stylesheet" href="static/css/owl.carousel.css">
+    <link rel="stylesheet" href="static/css/owl.theme.default.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <!-- 引入刚刚下载的 ECharts 文件 -->
+    <script src="static/js/echarts.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- loader -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+    </div>
+    <!-- end loader -->
+
+    <!-- header -->
+    <header>
+
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-md">
+            <div class="container">
+                <a class="navbar-brand">
+                    <span>上市物企</span>数据信息网</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="fa fa-bars"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="/index" class="nav-link, lead">首页</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/work" class="nav-link">图片集</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/blog-single" class="nav-link">博客</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="/about" class="nav-link">关于</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- end navbar -->
+
+
+
+
+    </header>
+    <!-- end header -->
+
+
+    <!-- corp -->
+    <div class="work segments">
+        <div class="container">
+            <div class="section-title">
+                <h3>年上市物企数量</h3>
+                <div class="line1"></div>
+                <div class="line2"></div>
+            </div>
+
+            <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
+            <div id="main" style="width: 100%;height:400px;"></div>
+
+                <script type="text/javascript">
+                  // 基于准备好的dom，初始化echarts实例
+                  var myChart = echarts.init(document.getElementById('main'));
+
+                  // 指定图表的配置项和数据
+                  var option = {
+                    title: {
+                      text: '港股市场'
+                    },
+                    tooltip: {},
+                    legend: {
+                      data: ['个数']
+                    },
+                    xAxis: {
+                      data: ['2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023']
+                    },
+                    yAxis: {},
+                    series: [
+                      {
+                        name: '个数',
+                        type: 'bar',
+                        data: [1, 2, 2, 1, 5, 8, 17, 15, 6, 2]
+                      }
+                    ]
+                  };
+
+                  // 使用刚指定的配置项和数据显示图表。
+                  myChart.setOption(option);
+                </script>
+            </div>
+    </div>
+    <!-- end corp -->
+
+
+    <!-- counter -->
+    <div class="counter segments bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="content">
+                        <h3 class="numscroller" data-min="1" data-max="59" data-delay="0" data-increment="2">59</h3>
+                        <h4>上市物企数量</h4>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="content">
+                        <h3 class="numscroller" data-min="1" data-max="744" data-delay="0" data-increment="10">744</h3>
+                        <h4>应收帐款（亿元）</h4>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="content no-mb1">
+                        <h3 class="numscroller" data-min="1" data-max="542" data-delay="0" data-increment="7">542</h3>
+                        <h4>毛利（亿元）</h4>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="content no-mb2">
+                        <h3 class="numscroller" data-min="1" data-max="1072" data-delay="0" data-increment="13">1072</h3>
+                        <h4>期末现金（亿元）</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end counter -->
+
+
+
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="content about">
+                        <h2>上市物企数据信息网</h2>
+                        <p>使用python爬取数据</p>
+                        <p>使用Echarts制作图表</p>
+                        <p>覆盖港股所有上市物企所有年度财报数据</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="content contact-us no-mb">
+                        <h4>联系我</h4>
+                        <ul>
+                            <li>
+                                <span>地址：</span> 中国  ·  深圳</li>
+                            <li>
+                                <span>电话：</span> 180****2169</li>
+                            <li>
+                                <span>邮箱：</span> pin*****@126.com</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="image">
+                        <img src="static/picture/QR code.png" alt="微信二维码" width="190" height="190">
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="wrap-copyright">
+            <p>Copyright &copy; 2024.Jesse All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- scroll to top -->
+    <div class="toTop">
+        <a href="#top" id="toTop">
+            <i class="fa fa-angle-up"></i>
+        </a>
+    </div>
+    <!-- end scroll to top -->
+
+
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/lightbox.js"></script>
+    <script src="static/js/jquery.filterizr.js"></script>
+    <script src="static/js/jquery.scrollToTop.min.js"></script>
+    <script src="static/js/owl.carousel.js"></script>
+    <script src="static/js/numscroller.js"></script>
+    <script src="static/js/main.js"></script>
+
+</body>
+
+</html>
